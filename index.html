@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Tazumal | Cafetería clásica en Chalchuapa</title>
+  <meta name="description" content="Café Tazumal, cafetería clásica en Chalchuapa, El Salvador. Café de altura, pan dulce, desayunos típicos y más.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header" id="inicio-top">
+    <a href="#inicio" class="logo" aria-label="Café Tazumal, inicio">
+      <span class="logo__icon" aria-hidden="true">☕</span>
+      <span class="logo__text">Café Tazumal</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#menu">Menú</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BIENVENIDA -->
+    <section class="hero" id="inicio">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__kicker">Chalchuapa, El Salvador</p>
+        <h1 class="hero__title">Bienvenidos a<br>Café Tazumal</h1>
+        <p class="hero__text">
+          Una cafetería de las de siempre: café de altura recién colado, pan dulce del día
+          y una mesa de madera esperando por usted y por una buena conversación.
+        </p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary">Ver el menú</a>
+          <a href="#visitanos" class="btn btn--ghost">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="about section" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__text">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2 class="section-title">Tradición en cada taza</h2>
+          <p>
+            En el corazón de Chalchuapa, tierra de café y de historia, abrimos las puertas con una idea sencilla:
+            servir el café como se hacía antes, sin prisa y con buen trato.
+          </p>
+          <p>
+            Trabajamos con café salvadoreño de altura, preparamos el pan dulce todas las mañanas y
+            cocinamos los desayunos y antojitos con recetas de casa.
+          </p>
+          <ul class="about__facts">
+            <li><strong>Café</strong> de altura, tostado local</li>
+            <li><strong>Pan</strong> dulce hecho cada mañana</li>
+            <li><strong>Recetas</strong> de casa, ambiente de siempre</li>
+          </ul>
+        </div>
+
+        <div class="about__gallery">
+          <figure class="photo photo--one">
+            <img src="images/interior.jpg" alt="Interior clásico de la cafetería con mesas de madera"
+                 onerror="this.onerror=null;this.src='https://unsplash.com/photos/sYpq2Fhy4mY/download?force=true&w=900';this.addEventListener('error',function(){this.style.display='none'},{once:true});"
+                 loading="lazy">
+          </figure>
+          <figure class="photo photo--two">
+            <img src="images/barista.jpg" alt="Barista preparando café en el mostrador"
+                 onerror="this.onerror=null;this.src='https://unsplash.com/photos/GLzzp7yMoSo/download?force=true&w=900';this.addEventListener('error',function(){this.style.display='none'},{once:true});"
+                 loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ + BUSCADOR -->
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Nuestra carta</p>
+          <h2 class="section-title">El menú</h2>
+          <p class="section-sub">Busque por nombre o ingrediente, o filtre por categoría.</p>
+        </div>
+
+        <div class="search" role="search">
+          <label for="searchInput" class="sr-only">Buscar en el menú</label>
+          <span class="search__icon" aria-hidden="true">🔍</span>
+          <input type="search" id="searchInput" class="search__input"
+                 placeholder="Buscar: capuchino, pupusas, pan dulce…" autocomplete="off">
+          <button type="button" class="search__clear" id="searchClear" aria-label="Borrar búsqueda" hidden>✕</button>
+        </div>
+
+        <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+
+        <p class="results-info" id="resultsInfo" aria-live="polite"></p>
+
+        <div class="menu__grid" id="menuGrid"></div>
+
+        <div class="empty" id="emptyState" hidden>
+          <p class="empty__icon" aria-hidden="true">🫖</p>
+          <p class="empty__title">No encontramos ese platillo</p>
+          <p>Pruebe con otra palabra o <button type="button" class="link-btn" id="resetBtn">vea todo el menú</button>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÍTANOS -->
+    <section class="visit section" id="visitanos">
+      <div class="container visit__grid">
+        <div>
+          <p class="eyebrow eyebrow--light">Le esperamos</p>
+          <h2 class="section-title section-title--light">Visítanos</h2>
+          <p class="visit__lead">Pase por una taza, quédese a leer el periódico o venga a desayunar con la familia.</p>
+        </div>
+
+        <div class="visit__cards">
+          <article class="info-card">
+            <h3>Ubicación</h3>
+            <p>Chalchuapa, Santa Ana<br>El Salvador</p>
+          </article>
+          <article class="info-card">
+            <h3>Horario</h3>
+            <p>Lunes a sábado: 6:30 am – 8:00 pm<br>Domingo: 7:00 am – 6:00 pm</p>
+          </article>
+          <article class="info-card">
+            <h3>Contacto</h3>
+            <p>Tel. 0000-0000<br>hola@cafetazumal.example</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Café Tazumal · Chalchuapa, El Salvador</p>
+    <p class="footer__small">Fotografías: Unsplash (licencia libre de uso).</p>
+  </footer>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

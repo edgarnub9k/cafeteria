@@ -1,0 +1,5 @@
+Coloque aqui sus fotos para usarlas en la pagina:
+- hero.jpg      (fondo de la bienvenida, horizontal, 1800 px de ancho o mas)
+- interior.jpg  (foto del local)
+- barista.jpg   (foto del cafe o barista)
+Si un archivo no existe, la pagina intenta cargar una foto libre de Unsplash.
